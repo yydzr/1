@@ -1,0 +1,10 @@
+# Cloudflare Tunnel 配置示例
+# 保存为 cloudflared 的 config.yml 后使用
+# 需要先执行 cloudflared tunnel create ai-efficiency-api
+tunnel: ai-efficiency-api
+credentials-file: C:\Users\YOUR_USER\.cloudflared\YOUR_TUNNEL_ID.json
+
+ingress:
+  - hostname: api.yourdomain.com
+    service: http://127.0.0.1:5000
+  - service: http_status:404
