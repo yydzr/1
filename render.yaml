@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: ai-efficiency-api
+    runtime: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: FLASK_ENV
+        value: production
+      - key: AUTO_CREATE_TABLES
+        value: "true"
+      - key: DATABASE_URL
+        value: sqlite:///ai_efficiency.db
+      - key: DEEPSEEK_BASE_URL
+        value: https://api.deepseek.com
+      - key: DEEPSEEK_MODEL
+        value: deepseek-chat
+      - key: SECRET_KEY
+        generateValue: true
+      - key: JWT_SECRET_KEY
+        generateValue: true
