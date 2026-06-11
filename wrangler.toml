@@ -7,4 +7,4 @@ pages_build_output_dir = "./frontend/dist"
 [[d1_databases]]
 binding = "DB"
 database_name = "ai-efficiency-db"
-database_id = "replace-with-your-d1-database-id"
+database_id = "132df94e-c177-4cb2-8109-2c94be7877c2"
