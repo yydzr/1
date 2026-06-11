@@ -1,6 +1,10 @@
 name = "ai-efficiency-system"
 compatibility_date = "2026-06-11"
+pages_build_output_dir = "./frontend/dist"
 
-[assets]
-directory = "./frontend/dist"
-not_found_handling = "single-page-application"
+# Create the D1 database first, then replace database_id:
+# npx wrangler d1 create ai-efficiency-db
+[[d1_databases]]
+binding = "DB"
+database_name = "ai-efficiency-db"
+database_id = "replace-with-your-d1-database-id"
